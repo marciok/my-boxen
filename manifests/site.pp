@@ -75,6 +75,13 @@ node default {
   ruby::version { '2.1.1': }
   ruby::version { '2.1.2': }
 
+  # installing cocoapods
+  $cocoapods_for_ruby_version = '2.1.2'
+  ruby_gem { "cocoapods for version ${cocoapods_for_ruby_version}":
+    gem          => 'cocoapods',
+    ruby_version => ruby_cocoapods_version,
+  }
+
   # common, useful packages
   package {
     [

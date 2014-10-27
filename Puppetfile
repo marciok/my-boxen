@@ -59,3 +59,21 @@ github "xquartz",     "1.2.1"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
+
+# Essentials
+github "chrome"
+github "iterm2"
+github "macvim"
+github "dash"
+github "github_for_mac"
+github "charles"
+github "seil"
+github "vim"
+github "atom"
+
+# Extras 
+github "skype"
+
+
+
+
