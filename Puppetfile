@@ -61,19 +61,19 @@ github "xquartz",     "1.2.1"
 # https://github.com/boxen.
 
 # Essentials
-github "chrome"
-github "iterm2"
-github "macvim"
-github "dash"
-github "github_for_mac"
-github "charles"
-github "seil"
-github "vim"
-github "atom"
 
-# Extras 
-github "skype"
+github "osx",             "2.7.1"
+github "chrome",          "1.2.0"
+github "iterm2",          "1.2.2"
+github "dash",            "1.0.0"
+github "github_for_mac",  "1.0.3"
+github "charles",         "1.0.4"
+github 'seil'#,            "1.0.2"
+github "atom",            "1.0.0"
+github "reveal", "1.0.6",  :repo => "marciok/puppet-reveal"
 
-
+# Extras
+github "skype",           "1.0.9"
+github "vlc",             "1.1.0"
 
 

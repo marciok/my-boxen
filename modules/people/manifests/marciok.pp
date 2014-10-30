@@ -9,48 +9,45 @@ package {
   ]:
 }
 
+# osx
+  osx::recovery_message { 'If this Mac is found, please email marcioklepacz@gmail.com': }
+  include osx::universal_access::ctrl_mod_zoom
+  include osx::finder::show_hidden_files
+  include osx::dock::autohide
+  include osx::finder::empty_trash_securely
+
+  class { 'osx::dock::position':
+    position => 'left'
+  }
+
 # Essentials
   include chrome
   include iterm2::stable
-  include macvim
   include dash
   include github_for_mac
   include charles
   include atom
-
-  include seil::login_item
-
-  # change the left control to F19:
-  seil::bind { 'keyboard bindings':
-    mappings => { 'capslock' => 53 }
-  }
-
-  include vim
-  vim::bundle { [
-    'scrooloose/syntastic',
-    'scrooloose/nerdtree',
-    'jistr/vim-nerdtree-tabs',
-    'tpope/vim-surround',
-    'tpope/vim-rails',
-    'tpope/vim-markdown',
-    'toyamarinyon/vim-swift',
-    'kien/ctrlp.vim',
-    'altercation/vim-colors-solarized'
-  ]: }
-
-  file { "${vim::vimrc}":
-    target  => "/Users/${::boxen_user}/.dotfiles/.vimrc",
-    require => Repository["/Users/${::boxen_user}/.dotfiles"]
-  }
+  include seil
 
 # Extras
   include skype
+  include vlc
 
-  repository { 
-    'dotfiles forked from mathiasbynens':
-    source  => 'git://github.com/marciok/dotfiles.git',
-    path => "/Users/${::boxen_user}/.dotfiles"
-    provider => 'git'
+  repository {
+    'macvim install and dotfiles':
+      source   => 'git://github.com/marciok/macvim-yadr.git',
+      path     => "/Users/${::boxen_user}/.yadr",
+      provider => 'git',
+  }
+
+  # installing Alcatraz for xcode
+  # Note: couldn't manage how to install a tar.gz with puppet
+  $plugins_dir = "/Users/${::boxen_user}/Library/Application\\ Support/Developer/Shared/Xcode/Plug-ins"
+  $download_uri = "https://github.com/supermarin/Alcatraz/releases/download/1.0.8/Alcatraz.tar.gz"
+
+  exec { "installing alcatraz":
+    command => "/bin/mkdir -p ${plugins_dir} && curl -L ${download_uri} | tar xvz -C ${plugins_dir}",
+    creates => $plugins_dir
   }
 
 }
