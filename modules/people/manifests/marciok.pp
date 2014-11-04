@@ -28,6 +28,7 @@ package {
   include charles
   include atom
   include seil
+  include reveal
 
 # Extras
   include skype
