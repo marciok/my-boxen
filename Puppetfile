@@ -71,6 +71,7 @@ github "charles",         "1.0.4"
 github 'seil'#,            "1.0.2"
 github "atom",            "1.0.0"
 
+# iOS Dev
 github "reveal",          "1.0.6",  :repo => "marciok/puppet-reveal"
 github "fabric",          "0.0.1",  :repo => "marciok/puppet-fabric"
 
