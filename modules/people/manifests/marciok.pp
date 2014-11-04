@@ -28,7 +28,6 @@ package {
   include charles
   include atom
   include seil
-  include reveal
 
 # Extras
   include skype
@@ -41,7 +40,11 @@ package {
       provider => 'git',
   }
 
-  # installing Alcatraz for xcode
+# iOS Dev
+  include reveal
+  include fabric
+
+  # installing Alcatraz for Xcode
   # Note: couldn't manage how to install a tar.gz with puppet
   $plugins_dir = "/Users/${::boxen_user}/Library/Application\\ Support/Developer/Shared/Xcode/Plug-ins"
   $download_uri = "https://github.com/supermarin/Alcatraz/releases/download/1.0.8/Alcatraz.tar.gz"

@@ -134,6 +134,11 @@ GITHUBTARBALL
     xquartz (1.2.1)
 
 GITHUBTARBALL
+  remote: marciok/puppet-fabric
+  specs:
+    fabric (0.0.1)
+
+GITHUBTARBALL
   remote: marciok/puppet-reveal
   specs:
     reveal (1.0.6)
@@ -160,6 +165,7 @@ DEPENDENCIES
   chrome (= 1.2.0)
   dash (= 1.0.0)
   dnsmasq (= 2.0.0)
+  fabric (= 0.0.1)
   foreman (= 1.2.0)
   gcc (= 2.2.0)
   git (= 2.5.0)

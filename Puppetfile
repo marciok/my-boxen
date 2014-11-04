@@ -70,7 +70,9 @@ github "github_for_mac",  "1.0.3"
 github "charles",         "1.0.4"
 github 'seil'#,            "1.0.2"
 github "atom",            "1.0.0"
-github "reveal", "1.0.6",  :repo => "marciok/puppet-reveal"
+
+github "reveal",          "1.0.6",  :repo => "marciok/puppet-reveal"
+github "fabric",          "0.0.1",  :repo => "marciok/puppet-fabric"
 
 # Extras
 github "skype",           "1.0.9"
