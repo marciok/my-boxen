@@ -4,8 +4,6 @@ This is my [boxen](https://boxen.github.com/), it's focused on iOS development b
 
 ## What You Get (besides whats included on [github boxen](http://github.com/boxen/our-boxen))
 
-This template project provides the following by default:
-
 * Chrome
 * Iterm2
 * Dash
